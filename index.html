@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="lyr">
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come these tags -->
+
+		<!-- SITE TITLE -->
+		<title>豆瓣电影数据可视化</title>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
+
+		<!-- Latest Bootstrap min CSS -->
+		<link rel="stylesheet" href="static/css/bootstrap.min.css">
+		<!-- Google Fonts -->
+		<link href="static/css/css2.css" rel="stylesheet">	
+		<link rel="stylesheet" href="static/css/animate.min.css">
+		<link rel="stylesheet" href="static/css/swiper.min.css">
+		<link rel="stylesheet" href="static/css/all.min.css">
+		<link rel="stylesheet" href="static/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="static/css/lightcase.min.css">
+		<link rel="stylesheet" href="static/css/style.css">
+		<link rel="stylesheet" href="static/css/responsive.css">
+        <!-- 引入刚刚下载的 ECharts 文件 -->
+        <script src="static/js/echarts.min.js"></script>
+	</head>
+
+	<body>
+
+		<!--START PAGE WRAPPER-->
+		<div class="page-wrapper">
+		
+			<!-- START PRELOADER -->
+			<div class="atf-preloader">
+				<div class="loader"></div>
+			</div>
+			<!-- END PRELOADER	-->
+			
+			<!-- Back to Top Start -->
+			<div class="back-to-top">
+				<i class="fas fa-long-arrow-alt-up"></i>
+			</div>
+			<!-- Back to Top End -->
+				
+			<!-- START HEADER -->
+			<header class="atf-header-area">
+
+				<div class="atf-site-header atf-style1 atf-sticky-header atf-main-header-in"> 
+					<div class="container"> 
+						<div class="row align-items-center">
+							<div class="col-xl-7 col-lg-7 col-md-1 col-sm-1 col-1">
+								<div class="atf-main-header-right">
+									<nav class="atf-nav">
+										<div class="atf-logo-area d-lg-none d-flex justify-content-center">
+										</div>
+										<ul class="atf-nav-list">
+											<li class="atf-nav-item">
+												<a href="/" class="atf-nav-link">首页</a>
+											</li>
+											<li class="atf-nav-item">
+												<a href="Ranking.html" class="atf-nav-link">电影数据概览</a>
+											</li>
+                                            <li class="atf-nav-item">
+												<a href="vis.html" class="atf-nav-link">可视化数据分析</a>
+											</li>
+
+										</ul>
+									</nav>
+								</div>
+							</div><!-- END COL -->
+						</div><!-- END ROW -->
+					</div><!-- END CONTAINER -->
+				</div>
+			</header>
+			<!-- END HEADER -->
+			
+			<!-- START HERO -->
+			<section id="hero" class="atf-hero-area atf_align_item_details atf-cover-bg atf-fixed-bg " style="background-image: url(static/image/homepage.jpg);">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-7 col-md-8 col-sm-12 col-12">
+							<div class="atf-hero-content">
+								<h1 class="title split-content up">电影数据可视化平台</h1>
+								<p class="describtion">以豆瓣top250的电影榜单为数据库，提供电影总览，可视化分析功能</p>
+							</div>
+						</div><!-- END COL -->
+					</div><!-- END ROW -->
+				</div><!-- END CONTAINER -->
+			</section>
+			<!-- END HERO -->
+
+
+			<!-- Counter Section Start -->
+			<section id="counter" class="atf-counter-area atf-section-padding bg-light">
+				<div class="container">
+					<div class="row justify-content-center text-center">
+						<div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12">
+							<div class="atf-section-title">
+								<h6 class="sub_title">电影数据概览</h6>
+								<h2 class="title split-content up">Overview of Film Data</h2>
+							</div>
+						</div><!-- END COL -->
+					</div><!-- END ROW --> 
+
+                    <table class="table table-striped mx-auto text-center table-hover">
+                    <thead>预览</thead>
+                    <tr>
+                        <td> 排名 </td>
+                        <td> 电影名 </td>
+                        <td> 导演 </td>
+                        <td> 评分 </td>
+                        <td> 年份 </td>
+                        <td> 国家 </td>
+                    </tr>
+
+                        <tr>
+                            <td> TOP1 </td>
+                            <td> 肖申克的救赎 </td>
+                            <td> 弗兰克·德拉邦特 Frank Darabont </td>
+                            <td> 9.7 </td>
+                            <td> 1994 </td>
+                            <td>  美国  </td>
+                        </tr>
+
+                        <tr>
+                            <td> TOP2 </td>
+                            <td> 霸王别姬 </td>
+                            <td> 陈凯歌 Kaige Chen </td>
+                            <td> 9.6 </td>
+                            <td> 1993 </td>
+                            <td>  中国大陆 中国香港  </td>
+                        </tr>
+
+                        <tr>
+                            <td> TOP3 </td>
+                            <td> 泰坦尼克号 </td>
+                            <td> 詹姆斯·卡梅隆 James Cameron </td>
+                            <td> 9.5 </td>
+                            <td> 1997 </td>
+                            <td>  美国 墨西哥  </td>
+                        </tr>
+
+                        <tr>
+                            <td> TOP4 </td>
+                            <td> 阿甘正传 </td>
+                            <td> 罗伯特·泽米吉斯 Robert Zemeckis </td>
+                            <td> 9.5 </td>
+                            <td> 1994 </td>
+                            <td>  美国  </td>
+                        </tr>
+
+                        <tr>
+                            <td> TOP5 </td>
+                            <td> 千与千寻 </td>
+                            <td> 宫崎骏 Hayao Miyazaki </td>
+                            <td> 9.4 </td>
+                            <td> 2001 </td>
+                            <td>  日本  </td>
+                        </tr>
+
+                        <tr>
+                            <td> TOP6 </td>
+                            <td> 美丽人生 </td>
+                            <td> 罗伯托·贝尼尼 Roberto Benigni </td>
+                            <td> 9.5 </td>
+                            <td> 1997 </td>
+                            <td>  意大利  </td>
+                        </tr>
+
+                        <tr>
+                            <td> TOP7 </td>
+                            <td> 这个杀手不太冷 </td>
+                            <td> 吕克·贝松 Luc Besson </td>
+                            <td> 9.4 </td>
+                            <td> 1994 </td>
+                            <td>  法国 美国  </td>
+                        </tr>
+
+                        <tr>
+                            <td> TOP8 </td>
+                            <td> 星际穿越 </td>
+                            <td> 克里斯托弗·诺兰 Christopher Nolan </td>
+                            <td> 9.4 </td>
+                            <td> 2014 </td>
+                            <td>  美国 英国 加拿大  </td>
+                        </tr>
+
+                        <tr>
+                            <td> TOP9 </td>
+                            <td> 盗梦空间 </td>
+                            <td> 克里斯托弗·诺兰 Christopher Nolan </td>
+                            <td> 9.4 </td>
+                            <td> 2010 </td>
+                            <td>  美国 英国  </td>
+                        </tr>
+
+                        <tr>
+                            <td> TOP10 </td>
+                            <td> 楚门的世界 </td>
+                            <td> 彼得·威尔 Peter Weir </td>
+                            <td> 9.4 </td>
+                            <td> 1998 </td>
+                            <td>  美国  </td>
+                        </tr>
+
+                        <tr>
+                            <td> TOP11 </td>
+                            <td> 辛德勒的名单 </td>
+                            <td> 史蒂文·斯皮尔伯格 Steven Spielberg </td>
+                            <td> 9.5 </td>
+                            <td> 1993 </td>
+                            <td>  美国  </td>
+                        </tr>
+
+                    </table>
+				</div><!--- END CONTAINER -->
+                <div class="container mt-3 ">
+                    <button  type="button" class="btn btn-outline-dark btn-lg">
+                        <a href="Ranking.html">查看更多</a>
+                    </button>
+                </div>
+			</section>
+			<!-- Counter Section End -->
+
+
+			<!-- START BLOG -->
+			<section id="blog" class="atf-blog-area atf-section-padding bg-light">
+				<div class="container">
+					<div class="row justify-content-center text-center">
+						<div class="col-xl-6 col-lg-7 col-md-8 col-sm-12 col-12">
+							<div class="atf-section-title">
+								<h6 class="sub_title">可视化数据分析</h6>
+								<h2 class="title split-content up">Visual data analysis</h2>
+							</div>
+						</div><!-- END COL -->
+					</div><!-- END ROW -->
+					<div class="row align-items-center">
+						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 wow rotateInDownLeft" data-wow-duration=".5s" data-wow-delay=".5s">
+							<div class="atf-single-counter">
+								<div class="atf-counter-icon">
+									<i class="fa-regular fa-handshake"></i>
+								</div>
+								<div class="atf-counter-content">
+                                    <h2><span class="counter-number"></span>9.7</h2>
+									<h4>评分最高达</h4>
+								</div>
+							</div>
+						</div><!--- END COL -->
+
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s">
+							<div class="atf-single-counter">
+								<div class="atf-counter-icon">
+									<i class="fa-solid fa-address-book"></i>
+								</div>
+								<div class="atf-counter-content">
+									<h2><span class="counter-number">2010</span></h2>
+									<h4>上映电影数量最多的年份</h4>
+								</div>
+							</div>
+						</div><!--- END COL -->
+						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s">
+							<div class="atf-single-counter">
+								<div class="atf-counter-icon">
+									<i class="fa-solid fa-users"></i>
+								</div>
+								<div class="atf-counter-content">
+									<h2><span class="counter-number"></span>27</h2>
+									<h4>电影种类数</h4>
+								</div>
+							</div>
+						</div><!--- END COL -->
+						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 wow rotateInDownRight" data-wow-duration=".5s" data-wow-delay=".5s">
+							<div class="atf-single-counter">
+								<div class="atf-counter-icon">
+									<i class="fa-solid fa-trophy"></i>
+								</div>
+								<div class="atf-counter-content">
+									<h2><span class="counter-number">34</span></h2>
+									<h4>包含国家</h4>
+								</div>
+							</div>
+						</div><!--- END COL -->
+					</div><!--- END ROW -->
+
+				</div><!--- END CONTAINER -->
+                <div class="container mt-3 ">
+                    <button  type="button" class="btn btn-outline-dark btn-lg">
+                        <a href="vis.html">查看详情</a>
+                    </button>
+                </div>
+			</section>
+			<!-- END Blog -->
+
+
+		</div>
+		<!--END PAGE WRAPPER-->
+
+
+		<!-- Latest jQuery -->
+		<script src="static/js/jquery.min.js"></script>
+		<script src="static/js/jquery.waypoints.min.js"></script>
+		<script src="static/js/bootstrap.bundle.min.js"></script>
+		<script src="static/js/gsap.min.js"></script>
+		<script src="static/js/lightcase.min.js"></script>
+		<script src="static/js/counterup.min.js"></script>
+		<script src="static/js/owl.carousel.min.js"></script>
+		<script src="static/js/jquery.appear.min.js"></script>
+		<script src="static/js/swiper.min.js"></script>
+		<script src="static/js/scrollTo.min.js"></script>
+		<script src="static/js/wow.min.js"></script>
+		<script src="static/js/form-contact.js"></script>
+		<script src="static/js/ajaxchimp.min.js"></script>
+		<script src="static/js/script.js"></script>
+	</body>
+</html>
